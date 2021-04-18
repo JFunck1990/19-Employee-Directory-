@@ -1,12 +1,13 @@
-//import logo from './logo.svg';
+
 import React from "react";
+import searchResultContainer from "./components/Main";
 //import './App.css';
-import Test from "./components/Test";
+import Main from "./components/Main";
+
 
 function App() {
-  return (
-    <Test/>
-  );
+  return <Main/>;
+
 }
 
 export default App;
