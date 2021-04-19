@@ -1,11 +1,18 @@
 
 import React from "react";
-import Main from "./components/Main";
-//import './App.css';
+import Main from "./components/Main/Main";
+import Jumbotron from "./components/Jumbotron/Jumbotron";
+
 
 
 function App() {
-  return <Main/>;
+  return(
+    <div>
+    <Jumbotron/>
+    <Main/>
+    </div>
+
+  );
 }
 
 export default App;
