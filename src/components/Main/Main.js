@@ -27,7 +27,7 @@ class searchResultContainer extends Component {
     this.setState({
       [name]: value,
     });
-    
+
 
   };
 
