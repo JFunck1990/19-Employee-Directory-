@@ -5,7 +5,7 @@ import API from "../../utils/API";
 
 class searchResultContainer extends Component {
   state = {
-    sortOrder: "",
+    sortOrder: "ascending",
     search: "",
     results: [],
   };
@@ -20,13 +20,6 @@ class searchResultContainer extends Component {
       }).catch((err) => console.log(err));
   }
 
-  /*searchEmp = (query) => {
-    API.search()
-      .then((res) => {
-        console.log(res);
-        //this.setState({ results: res.data.data })
-      }).catch((err) => console.log(err));
-  };*/
 
   handleInputChange = (event) => {
     console.log("This is the Api" + API);
@@ -35,10 +28,20 @@ class searchResultContainer extends Component {
     this.setState({
       [name]: value,
     });
+
+  };
+
+
+  searchEmp = query => {
+    API.search(query)
+      .then(res =>
+        this.setState({ results: res.data.results}))
+      .catch(err => console.log(err));
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
+    console.log("This is the event" + event)
     this.searchEmp(this.state.search);
   };
 
@@ -62,6 +65,7 @@ class searchResultContainer extends Component {
     }
     this.setState({ results: sortedEmployees })
   }
+
   sortByLastName = () => {
     const sortedEmployees = this.state.results.sort((a, b) => {
       if (b.name.last > a.name.last) {
@@ -85,7 +89,11 @@ class searchResultContainer extends Component {
   render() {
     return (
       <div>
-        <SearcForm></SearcForm>
+        <SearcForm
+          value ={this.state.search}
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}/>
+
         <List results={this.state.results} sortByFirstName={this.sortByFirstName} sortByLastName={this.sortByLastName}></List>
       </div>
     );
