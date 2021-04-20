@@ -5,11 +5,11 @@ function List(props) {
     <table>
         <thead>
         <tr className="row">
-            <th className="col-md-2" onClick={props.sortByFirstName}> First Name</th>
-            <th className="col-md-3" onClick={props.sortByLastName}> Last Name</th>
-            <th className="col-md-2">Photo</th>
-            <th className="col-md-3">Email</th>
-            <th className="col-md-2">Phone Number</th>
+            <th className="firstName col-md-2" onClick={props.sortByFirstName}> First Name</th>
+            <th className="lastName col-md-3" onClick={props.sortByLastName}> Last Name</th>
+            <th className="photo col-md-2">Photo</th>
+            <th className="email col-md-3">Email</th>
+            <th className="phone col-md-2">Phone Number</th>
         </tr>
         </thead>
         <tbody>

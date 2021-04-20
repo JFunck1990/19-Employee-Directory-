@@ -52,6 +52,13 @@ class searchResultContainer extends Component {
     this.setState({ results: filteredList });
 
   };
+  handleFormBack = query => {
+      API.search(query)
+      .then(res => (
+        this.setState({ results: res.data.results}))
+      )
+      .catch(err => console.log(err));
+  }
 
   handleFormSubmit = (event) => {
     event.preventDefault();
@@ -106,7 +113,9 @@ class searchResultContainer extends Component {
         <SearcForm
           value ={this.state.search}
           handleInputChange={this.handleInputChange}
-          handleFormSubmit={this.handleFormSubmit}/>
+          handleFormSubmit={this.handleFormSubmit}
+          handleFormBack={this.handleFormBack}
+          />
 
         <List results={this.state.results} sortByFirstName={this.sortByFirstName} sortByLastName={this.sortByLastName}></List>
       </div>

@@ -21,6 +21,9 @@ const SearcForm = (props) => {
         <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
           Search
         </button>
+        <button onClick={props.handleFormBack} className="btn btn-primary mt-3">
+          Back to list
+        </button>
       </div>
     </div>
   </form>
