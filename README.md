@@ -43,7 +43,7 @@ npm start
 # Video of how it works.
 > If you click GIF you will be navigated to YouTube for a full-video.
 
-[![Budget Tracker](https://media.giphy.com/media/l7xlQ3xDIyQNBZnTNq/giphy.gif)](https://www.youtube.com/watch?v=jQ-yy9_lYAo)
+[![Employee Directory](https://media.giphy.com/media/pVwNI3vBpcOtbQAAWe/giphy.gif)](https://youtu.be/QOqVFPdNAf4)
 
 
 
