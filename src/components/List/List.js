@@ -15,11 +15,11 @@ function List(props) {
         <tbody>
       {props.results.map(result => (
         <tr className="row background" key={result.login.uuid}>
-            <td className="col-md-2 txt-color">{result.name.first}</td>
-            <td className="col-md-3">{result.name.last}</td>
-            <td className="col-md-2"><img src={result.picture.large} alt="emp-img"/></td>
-            <td className="col-md-3">{result.email}</td>
-            <td className="col-md-2">{result.phone}</td>
+            <td className="background col-md-2 txt-color">{result.name.first}</td>
+            <td className="background col-md-3">{result.name.last}</td>
+            <td className="background col-md-2"><img src={result.picture.large} alt="emp-img"/></td>
+            <td className="background col-md-3">{result.email}</td>
+            <td className="background col-md-2">{result.phone}</td>
         </tr>
       ))}
       </tbody>

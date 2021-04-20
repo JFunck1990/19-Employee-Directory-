@@ -22,12 +22,12 @@ class searchResultContainer extends Component {
 
 
   handleInputChange = (event) => {
-    console.log("This is the Api" + API);
     const value = event.target.value;
     const name = event.target.name;
     this.setState({
       [name]: value,
     });
+    
 
   };
 
@@ -37,6 +37,7 @@ class searchResultContainer extends Component {
       .then(res =>
         this.setState({ results: res.data.results}))
       .catch(err => console.log(err));
+
   };
 
   handleFormSubmit = (event) => {
