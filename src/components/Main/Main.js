@@ -18,6 +18,10 @@ class searchResultContainer extends Component {
         console.log(res);
         this.setState({ results: res.data.results})
       }).catch((err) => console.log(err));
+
+      const searchEmp = this.state.results.filter((emp) => {
+
+      })
   }
 
 
@@ -29,14 +33,23 @@ class searchResultContainer extends Component {
     });
 
 
+
   };
 
 
   searchEmp = query => {
-    API.search(query)
-      .then(res =>
-        this.setState({ results: res.data.results}))
-      .catch(err => console.log(err));
+    // API.search(query)
+    //   .then(res => (
+    //     this.setState({ results: res.data.results}))
+    //   )
+    //   .catch(err => console.log(err));
+
+      console.log("this is query")
+       const filteredList = this.state.results.filter((employee) => {
+      let values = Object.values(employee).join('').toLowerCase();
+      return values.indexOf(query.toLowerCase()) !== -1;
+    });
+    this.setState({ results: filteredList });
 
   };
 
