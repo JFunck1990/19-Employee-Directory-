@@ -50,6 +50,6 @@ npm start
 <a name="sc"></a>
 # Screen Shots
 ### Home
-<img src="public/img/main.png">
+<img src="public/img/home.png">
 
 
