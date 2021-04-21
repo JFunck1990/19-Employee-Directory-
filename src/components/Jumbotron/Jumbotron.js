@@ -9,6 +9,8 @@ function Jumbotron() {
         <ul>
           <li>Click First Name for alphabetical ascending or descending order</li>
           <li>Click Last Name for alphabetical ascending or descending order</li>
+          <li>Type in Employee name in input and click search button</li>
+          <li>Click Back to List to see main list</li>
         </ul>
       </div>
     </div>
