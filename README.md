@@ -11,7 +11,7 @@ by: Jack Funck
 
 <a name="link"></a>
 ## Link
-give it a try: <a href="https://polar-lowlands-57059.herokuapp.com/" target="_blank"> Employee Directory</a>
+give it a try: <a href="https://jfunck1990.github.io/19-Employee-Directory-/?search=patel" target="_blank"> Employee Directory</a>
 
 <a name="desc"></a>
 ## Description
